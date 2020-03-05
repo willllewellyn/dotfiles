@@ -152,6 +152,12 @@ alias ms="make shell"
 alias rubocop="bundle exec rubocop"
 alias rspec="bundle exec rspec"
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias d="dotfiles"
+alias da="d add"
+alias dc="d commit -m"
+alias dp="d push"
+alias dfs="d status"
+
 
 zipf () { zip -r "$1".zip "$1" ; }          # zipf:         To create a ZIP archive of a folder
 alias numFiles='echo $(ls -1 | wc -l)'      # numFiles:     Count of non-hidden files in current dir
