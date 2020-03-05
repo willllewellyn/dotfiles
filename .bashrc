@@ -70,7 +70,7 @@ alias gr="g rebase"
 alias grm="g rebase origin/master"
 alias grc="g rebase --continue"
 alias gra="g rebase --abort"
-alias gri="g rebase -i HEAD~"     # Interactively rebase commits e.g. gri 1
+alias gri="g rebase -i HEAD~ "     # Interactively rebase commits e.g. gri 1
 alias gcundo="g reset HEAD~"       # Undo last commit
 alias gcredo="g reset 'HEAD@{1}'"  # Redo last uncommit
 alias gundo="g reset --hard"        # Undo all changes
@@ -151,11 +151,15 @@ alias ml="make lint"
 alias ms="make shell"
 alias rubocop="bundle exec rubocop"
 alias rspec="bundle exec rspec"
-alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
+##########
+# DOTFILES
+##########
+alias df='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias d="dotfiles"
-alias da="d add"
-alias dc="d commit -m"
-alias dp="d push"
+alias dfa="d add"
+alias dfc="d commit -m "
+alias dfp="d push"
 alias dfs="d status"
 
 
@@ -165,10 +169,9 @@ alias make1mb='mkfile 1m ./1MB.dat'         # make1mb:      Creates a file of 1m
 alias make5mb='mkfile 5m ./5MB.dat'         # make5mb:      Creates a file of 5mb size (all zeros)
 alias make10mb='mkfile 10m ./10MB.dat'      # make10mb:     Creates a file of 10mb size (all zeros)
 
-#   ---------------------------
-#   6. NETWORKING
-#   ---------------------------
-
+############
+# NETWORKING
+############
 alias myip='curl ip.appspot.com'                    # myip:         Public facing IP Address
 alias netCons='lsof -i'                             # netCons:      Show all open TCP/IP sockets
 alias flushDNS='dscacheutil -flushcache'            # flushDNS:     Flush out the DNS Cache
