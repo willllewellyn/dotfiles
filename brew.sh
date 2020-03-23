@@ -40,6 +40,7 @@ brew install wget --with-iri
 # Install GnuPG to enable PGP-signing commits.
 brew install gnupg
 
+brew install colordiff
 brew install imagemagick --with-webp
 brew install git
 brew install openssh
@@ -47,7 +48,7 @@ brew install rbenv
 brew install ssh-copy-id
 brew install zsh
 brew install vim --with-override-system-vi
-brew install vlc
+
 
 # Remove outdated versions from the cellar
 brew cleanup

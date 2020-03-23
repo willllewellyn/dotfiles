@@ -13,18 +13,21 @@ export INPUTRC=~/.inputrc
 
 export PATH="/Users/wllewellyn/Library/Python/3.7/bin:$PATH"
 
-eval "$(rbenv init -)"
+export PATH="`ruby -e 'puts Gem.user_dir'`/bin:$PATH"
+
+# echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
+# echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
 
 # eval "$(pyenv init -)"
 
 # Append to the Bash history file, rather than overwriting it
-shopt -s histappend;
+# shopt -s histappend;
 
 # Autocorrect typos in path names when using `cd`
-shopt -s cdspell;
+# shopt -s cdspell;
 
 # atom as default
-export EDITOR="atom"
+export EDITOR="vim"
 
 
 
@@ -41,3 +44,5 @@ fi;
 [ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2- | tr ' ' '\n')" scp sftp ssh;
 
 # [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
